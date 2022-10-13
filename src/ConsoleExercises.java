@@ -2,23 +2,23 @@ import java.util.Scanner;
 
 public class ConsoleExercises {
     public static void main(String[] args) {
-        double pi = 3.14159;
-        System.out.printf("The value of pi is approximately %.2f.%n", pi);
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter an integer: ");
-        int userNumber = scanner.nextInt();
-
-        System.out.println("Enter 3 words: ");
-        scanner.nextLine();
-        String word1 = scanner.next();
-        String word2 = scanner.next();
-        String word3 = scanner.next();
-        System.out.printf("Your 3 words were:%n %s%n %s%n %s%n", word1, word2, word3);
-        scanner.nextLine();
-        System.out.println("Enter a sentence: ");
-        String userSentence = scanner.nextLine();
-        System.out.println("Your sentence was: " + userSentence + ".");
+//        double pi = 3.14159;
+//        System.out.printf("The value of pi is approximately %.2f.%n", pi);
+//
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter an integer: ");
+//        int userNumber = scanner.nextInt();
+//
+//        System.out.println("Enter 3 words: ");
+//        scanner.nextLine();
+//        String word1 = scanner.next();
+//        String word2 = scanner.next();
+//        String word3 = scanner.next();
+//        System.out.printf("Your 3 words were:%n %s%n %s%n %s%n", word1, word2, word3);
+//        scanner.nextLine();
+//        System.out.println("Enter a sentence: ");
+//        String userSentence = scanner.nextLine();
+//        System.out.println("Your sentence was: " + userSentence + ".");
 
 //        System.out.println("Enter length: ");
 //        int userLength = Integer.parseInt(scanner.nextLine());
@@ -28,36 +28,39 @@ public class ConsoleExercises {
 //        int perimeter = (userLength*2) + (userWidth*2);
 //        System.out.printf("The perimeter of the room is %d.", perimeter);
 
-        System.out.print("Enter length: ");
-        double userLength = Double.parseDouble(scanner.nextLine());
-        System.out.print("Enter width: ");
-        double userWidth = Double.parseDouble(scanner.nextLine());
-        System.out.print("Enter height: ");
-        double userHeight = Double.parseDouble(scanner.nextLine());
-        double area = userLength * userWidth;
-        double perimeter = (userLength * 2) + (userWidth * 2);
-        double volume = userHeight*userWidth*userLength;
-        System.out.printf("The area of the room is %.2f.%n", area);
-        System.out.printf("The perimeter of the room is %.2f.%n", perimeter);
-        System.out.printf("The volume of the room is %.2f cubic feet.%n",volume);
+//        System.out.print("Enter length: ");
+//        double userLength = Double.parseDouble(scanner.nextLine());
+//        System.out.print("Enter width: ");
+//        double userWidth = Double.parseDouble(scanner.nextLine());
+//        System.out.print("Enter height: ");
+//        double userHeight = Double.parseDouble(scanner.nextLine());
+//        double area = userLength * userWidth;
+//        double perimeter = (userLength * 2) + (userWidth * 2);
+//        double volume = userHeight * userWidth * userLength;
+//        System.out.printf("The area of the room is %.2f.%n", area);
+//        System.out.printf("The perimeter of the room is %.2f.%n", perimeter);
+//        System.out.printf("The volume of the room is %.2f cubic feet.%n", volume);
 
 //        1. Prompt the user to enter a favorite quote
 //        - output the quote
 //        - ask them to enter how many words are in the quote
 //        - output the number they entered
 //        - output if the number they entered indeed matched the number of words
-        System.out.println("What's your favorite quote?: ");
-        String userInput = scanner.next();
-        scanner.nextLine();
-        System.out.println("How many letters are in your quote?: ");
-        String qtLength = scanner.next();
-        scanner.nextLine();
-        if (qtLength.length() == userInput.length()) {
-            System.out.println("Yes that is the right length!");
-        } else {
-            System.out.println("Nope, that's not the right length.");
-        }
-    }
+//        System.out.println("What's your favorite quote?: ");
+//        String userInput = scanner.next();
+//        scanner.nextLine();
+//        System.out.println("How many letters are in your quote?: ");
+//        String qtLength = scanner.next();
+//        scanner.nextLine();
+
+
+
+//        if (qtLength.length() == userInput.length()) {
+//            System.out.println("Yes that is the right length!");
+//        } else {
+//            System.out.println("Nope, that's not the right length.");
+//        }
+
 //        2. Prompt the user to enter a list of top three favorite foods separated by only spaces
 //
 //        - Use the printf() to output the three top foods with the format:
@@ -71,4 +74,29 @@ public class ConsoleExercises {
 //                - output the result as a comma-separated list using printf()
 
 
+//*********PIN EXERCISE*********
+//******************************
+    Scanner sc = new Scanner(System.in);
+    int pin = 1234;
+    int attempts = 0;
+
+        System.out.println("Welcome to CodeUp FCU!");
+        System.out.println("Enter your pin: ");
+    int userInput = sc.nextInt();
+    attempts++;
+
+        while(userInput !=pin &&attempts< 3)
+
+    {
+        System.out.println("\nINCORRECT PIN. TRY AGAIN.");
+        System.out.print("Enter your pin: ");
+        userInput = sc.nextInt();
+        attempts++;
+    }
+        if(userInput ==pin) {
+            System.out.println("\nPIN ACCEPTED");
+        } else if(attempts >=3){
+            System.out.println("\nYOU HAVE RUN OUT OF ATTEMPTS. ACCOUNT LOCKED");
+        }
+    }
 }
