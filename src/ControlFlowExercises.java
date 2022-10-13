@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
 //        int i = 100;
@@ -25,17 +28,39 @@ public class ControlFlowExercises {
 //            System.out.println(i);
 //        }
 //
-        for(int i = 1; i <= 100; i++){
-            if((i % 3) == 0) {
-                System.out.println("Fizz");
-            } else if ((i % 5) == 0) {
-                System.out.println("Buzz");
-            } else if ((i % 15) == 0) {
-                System.out.println("FizzBuzz");
-            } else {
-                System.out.println(i);
+//        for(int i = 1; i <= 100; i++){
+//            if((i % 3) == 0) {
+//                System.out.println("Fizz");
+//            } else if ((i % 5) == 0) {
+//                System.out.println("Buzz");
+//            } else if ((i % 15) == 0) {
+//                System.out.println("FizzBuzz");
+//            } else {
+//                System.out.println(i);
+//            }
+//        }
+
+        Scanner sc = new Scanner(System.in);
+        String choice = "yes";
+
+        while(choice.equalsIgnoreCase("yes")) {
+            System.out.println("Enter an integer: ");
+            int userInt = sc.nextInt();
+
+            System.out.println("Number" + " | " + "Squared" + " | " + "Cubed");
+            System.out.println("------" + " | " + "------ " + " | " + "------");
+
+            for (int i = 1; i <= userInt; i++) {
+                    int numberSquared = i * i;
+                    int numberCubed = i * i * i;
+                    String message = "\n" + i + "  |  " + numberSquared + "  |  " + numberCubed;
+
+                    System.out.println(message);
+                }
+                System.out.println("Continue? (yes/no): ");
+                choice = sc.next();
+                System.out.println();
             }
         }
-
     }
-}
+
