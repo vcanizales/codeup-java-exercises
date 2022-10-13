@@ -40,27 +40,53 @@ public class ControlFlowExercises {
 //            }
 //        }
 
+//        Scanner sc = new Scanner(System.in);
+//        String choice = "yes";
+//
+//        while(choice.equalsIgnoreCase("yes")) {
+//            System.out.println("Enter an integer: ");
+//            int userInt = sc.nextInt();
+//
+//            System.out.println("Number" + " | " + "Squared" + " | " + "Cubed");
+//            System.out.println("------" + " | " + "------ " + " | " + "------");
+//
+//            for (int i = 1; i <= userInt; i++) {
+//                    int numberSquared = i * i;
+//                    int numberCubed = i * i * i;
+//                    String message = "\n" + i + "  |  " + numberSquared + "  |  " + numberCubed;
+//
+//                    System.out.println(message);
+//                }
+//                System.out.println("Continue? (yes/no): ");
+//                choice = sc.next();
+//                System.out.println();
+//            }
+
         Scanner sc = new Scanner(System.in);
         String choice = "yes";
 
-        while(choice.equalsIgnoreCase("yes")) {
-            System.out.println("Enter an integer: ");
-            int userInt = sc.nextInt();
+        while (choice.equalsIgnoreCase("yes")) {
+            System.out.println("Enter numeric grade: ");
+            double grade = sc.nextDouble();
 
-            System.out.println("Number" + " | " + "Squared" + " | " + "Cubed");
-            System.out.println("------" + " | " + "------ " + " | " + "------");
-
-            for (int i = 1; i <= userInt; i++) {
-                    int numberSquared = i * i;
-                    int numberCubed = i * i * i;
-                    String message = "\n" + i + "  |  " + numberSquared + "  |  " + numberCubed;
-
-                    System.out.println(message);
-                }
-                System.out.println("Continue? (yes/no): ");
-                choice = sc.next();
-                System.out.println();
+            char letter = 'F';
+            if (grade >= 88) {
+                letter = 'A';
+            } else if (grade >= 80) {
+                letter = 'B';
+            } else if (grade >= 67) {
+                letter = 'C';
+            } else if (grade >= 60) {
+                letter = 'D';
             }
+
+            String message = "Equivalent Letter Grade:\t" + letter;
+            System.out.println(message);
+
+            System.out.println("Do you want to continue? (yes/no) ");
+            choice = sc.next();
+            System.out.println();
         }
     }
+}
 
