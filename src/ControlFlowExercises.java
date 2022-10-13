@@ -17,8 +17,15 @@ public class ControlFlowExercises {
 //            i = i*i;
 //        } while (i <= 1000000);
 
-        for(long i = 2; i <= 1000000; i*=i){
+//        for(long i = 2; i <= 1000000; i*=i){
+//            System.out.println(i);
+//        }
+
+        for(int i = 1; i <= 100; i++){
             System.out.println(i);
         }
+
+
+
     }
 }
