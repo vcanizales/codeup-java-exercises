@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MethodsExercises {
 
     public static int addition(int x, int y){
@@ -20,8 +22,20 @@ public class MethodsExercises {
         return x%y;
     }
 
+    public static int getInteger(int min, int max) {
+        Scanner sc = new Scanner(System.in);
+        System.out.printf("Enter a number between %d and %d:%n", min, max);
+        int value = sc.nextInt();
+
+        if (value <= 10 && value >= 1) {
+            return getInteger(min, max);
+        } else {
+            System.out.println("NOPE THAT'S NOT ETT!");
+            return value;
+        }
+    }
 
     public static void main(String[] args) {
-        System.out.println(division(5,0));
+        getInteger(1, 10);
     }
 }
