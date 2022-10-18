@@ -33,7 +33,6 @@ public class MethodsExercises {
 
         if (value <= 10 && value >= 1) {
             System.out.println("GOOD JOB!");
-            ;
         } else {
             System.out.println("NOPE THAT'S NOT IT!");
         }
