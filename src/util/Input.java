@@ -20,15 +20,21 @@ public class Input {
         return scanner.nextLine();
     }
 
+    public String getString(String prompt){
+        System.out.println(prompt);
+        return scanner.nextLine();
+    }
+
     public boolean yesNo() {
         System.out.println("So yes or no?");
         String choice = scanner.next().toLowerCase();
-        boolean approved = choice.startsWith("y");
-        if (approved) {
-            return true;
-        } else {
-            return false;
-        }
+//        boolean approved = choice.startsWith("y");
+//        if (approved) {
+//            return true;
+//        } else {
+//            return false;
+//        }
+        return choice.equalsIgnoreCase("y") || choice.equalsIgnoreCase("yes");
     }
 
     public int getInt(int min, int max) {
@@ -96,8 +102,8 @@ public class Input {
         return value;
     }
 
-        public double getDouble () {
-            System.out.println("Otro numero por favor");
+        public double getDouble (String prompt) {
+            System.out.println(prompt);
             return scanner.nextDouble();
         }
     }

@@ -13,6 +13,8 @@ public class Person {
         System.out.println("Hello" + this.name + "!");
     }
 
+    public Person(){}
+
     public static void main(String[] args) {
         Person person1 = new Person();
         person1.setName("John");
@@ -22,8 +24,5 @@ public class Person {
         person2.setName("Jane");
         System.out.println(person1.getName());
         System.out.println(person2.getName());
-
-
-
     }
 }
