@@ -1,7 +1,12 @@
 package Animals;
 
-public class Parrot extends Bird {
+public class Parrot extends Bird implements Pet{
     public void makeNoise() {
+    }
+
+    public void beCute(){
+        System.out.println("Human goes awwwwww");
+    }
 
 //        public void setName (String parrotName){
 //            super.name = parrotName;
@@ -19,5 +24,5 @@ public class Parrot extends Bird {
 //    public Parrot() {
 //            System.out.println("A new parrot just got constructed.");
 //        }
-    }
+
 }

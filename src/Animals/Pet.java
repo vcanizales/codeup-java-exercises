@@ -1,2 +1,7 @@
-package Animals;public class Pet {
+package Animals;
+
+public interface Pet {
+
+    public void beCute();
+
 }
