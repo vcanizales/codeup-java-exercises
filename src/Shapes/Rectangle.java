@@ -3,24 +3,24 @@ package Shapes;
 public class Rectangle extends Quadrilateral implements Measurable {
 
 
-    public Rectangle(int length, int width) {
+    public Rectangle(double length, double width) {
         super(length, width);
     }
 
     @Override
-    public void setLength(int length) {
+    public void setLength(double length) {
     }
 
-    public int getLength() {
+    public double getLength() {
         return super.getLength();
     }
 
 
     @Override
-    public void setWidth(int width) {
+    public void setWidth(double width) {
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return super.getWidth();
     }
 
